@@ -1,14 +1,23 @@
 pipeline {
-  agent {
-    dockerfile true
-  }
-
+  agent none
   stages {
     stage('checkout') {
+      agent any
       steps {
-        sh 'node --version'
+        
         sh 'node install'
       }
     }
+    
+     stage('docbuild') {
+     agent {
+         dockerfile true
+     }
+      steps {
+        sh 'node --version'
+       
+      }
+    }
+    
   }
 }
