@@ -6,8 +6,8 @@ pipeline {
   stages {
     stage('checkout') {
       steps {
-        checkout scm
-        sh npm install
+        sh 'node --version'
+        sh 'node install'
       }
     }
   }
