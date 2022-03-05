@@ -4,7 +4,7 @@ FROM node:16
 # Building Angular app
 WORKDIR /app
 #COPY /package.json /app
-COPY . .
+COPY package*.json ./
 RUN npm install
 #COPY . /app
 
